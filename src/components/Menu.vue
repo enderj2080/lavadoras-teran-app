@@ -1,43 +1,35 @@
 <template>
-    <aside class="dark:text-gray-100 text-blak">
-        <div class="text-center">
-            <div class="i-logos:nuxt w-30 h-30"></div>
-        </div>
+    <nav class="flex flex-row  dark:text-gray-100 text-blak">
+        <div class=" ">
 
+            <nuxt-link to="/">
+                <span class="i-carbon-home text-2xl">home</span>
+                <span>Home</span>
+            </nuxt-link>
 
-        <div class="">
-            <button class="border-none bg-transparent">
-                <div class="i-ic:twotone-double-arrow w-10 h-10 "></div>
-            </button>
-        </div>
-        <div>
-            <nav class="flex flex-col items-center justify-center text-center">
+            <nuxt-link to="/">
+                <span class="i-mdi-login text-2xl">Login</span>
+                <span>Login</span>
+            </nuxt-link>
 
-                <nuxt-link to="/">
-                    <span class="i-carbon-home text-2xl">home</span>
-                    <span>Home</span>
-                </nuxt-link>
-
-                <nuxt-link to="/">
-                    <span class="i-mdi-login text-2xl">Login</span>
-                    <span>Login</span>
-                </nuxt-link>
-
-                <nuxt-link to="/">
-                    <span i-carbon-email text-2xl>Contactos</span>
-                    <samp>Contactos</samp>
-                </nuxt-link>
-                <nuxt-link to="/">
-                    <span>About</span>
-                </nuxt-link>
+            <nuxt-link to="/">
+                <span i-carbon-email text-2xl>Contactos</span>
+                <samp>Contactos</samp>
+            </nuxt-link>
+            <nuxt-link to="/">
+                <span>About</span>
+            </nuxt-link>
+            <div class="flex-row justify-end ">
                 <button @click="toggleDark()"
                     class="i-carbon-sun dark:i-carbon-moon text-2xl text-orange-500 dark:text-orange-500" />
 
-            </nav>
+            </div>
+
         </div>
 
 
-    </aside>
+
+    </nav>
 </template>
 <style scoped>
 aside {
@@ -46,11 +38,11 @@ aside {
 }
 
 nav {
-    @apply: flex flex-col justyfy-center decoration-none font-bold;
+    @apply: flex flex-col decoration-none font-bold;
 }
 
 a {
-    @apply: decoration-none font-bold text-gray-900;
+    @apply: decoration-none font-bold text-gray-900 ml-2;
 }
 </style>
 <script lang="ts" setup>
